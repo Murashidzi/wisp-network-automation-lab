@@ -5,7 +5,7 @@ This repository demonstrates the design and automation of a **small-scale Wirele
 
 ## Architecture Overview
 
-![Network Topology](diagrams/network-topology.png)
+![Network Architecture](diagrams/wisp-architecture.png)
 
 ![Security Traffic Flow](diagrams/security-traffic-flow.png)
 
