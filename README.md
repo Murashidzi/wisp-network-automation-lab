@@ -106,7 +106,7 @@ Example service tiers include:
 
 A Python automation script demonstrates how **subscriber provisioning can be automated using the MikroTik RouterOS REST API**.
 
-The script simulates a provisioning workflow triggered by an installation event.
+The script implements a provisioning workflow triggered by an installation event.
 
 Key automation features include:
 
@@ -199,9 +199,10 @@ python automation/mikrotik_pppoe_provisioning.py
 
 
 # Future Directions
-This repository represents an early exploration into *network infrastructure automation and observability*.
 
-Future extensions planned for this lab include:
+This repository documents a completed network infrastructure lab.
+ 
+The following extensions are planned for future iterations:
 
 **Network Security Enhancements**
 - automated firewall policy deployment
@@ -223,24 +224,27 @@ Future extensions planned for this lab include:
 - integration with external OSS/BSS systems
 
 **Security Research Direction**
-This project is also a stepping stone toward research into kernel-level security and infrastructure protection, particularly exploring:
-- eBPF-based runtime security
-- container network observability
-- infrastructure-level threat detection
+This lab is one component of a broader research trajectory. Active research 
+into kernel-level security is currently underway — see 
+[sentinel-ebpf](https://github.com/Murashidzi/sentinel-ebpf) for the 
+implementation of eBPF-based container runtime threat detection.
+
 
 
 # About
 
-**This repository is part of an ongoing effort to explore:**
-- network infrastructure engineering
-- automation-driven operations
-- secure and observable network systems
+This lab demonstrates applied network infrastructure engineering across three 
+layers simultaneously: physical wireless access network design, subscriber 
+authentication and management, and operational telemetry.
 
-I am particularly interested in the intersection of **network engineering, infrastructure security, and automation**.
+The network telemetry patterns implemented here — SNMP collection via Telegraf, 
+time-series storage in InfluxDB, threshold-based alerting in Grafana — directly 
+inform the observability architecture in my eBPF container security research, 
+where the same principle applies: you cannot detect what you cannot measure.
 
-Future projects will expand into areas such as:
-
-- kernel-level security using eBPF
-- container runtime protection
-- high-performance network telemetry
-- automated infrastructure security enforcement
+The security baseline implemented in this lab (edge filtering, SYN flood 
+protection, RADIUS authentication, VLAN segmentation) reflects the same 
+defence-in-depth philosophy applied at the cloud layer in the 
+[Zero Trust Banking Platform](https://github.com/Murashidzi/zero-trust-banking-platform) 
+and at the kernel layer in [sentinel-ebpf](https://github.com/Murashidzi/sentinel-ebpf) 
+(in development).
